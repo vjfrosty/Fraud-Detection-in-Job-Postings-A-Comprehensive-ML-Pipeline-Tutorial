@@ -1,0 +1,42 @@
+# Data manipulation and analysis
+pandas
+numpy
+
+# Machine Learning
+scikit-learn
+xgboost
+catboost
+imblearn
+optuna
+
+# Deep Learning and NLP
+torch
+transformers
+nltk
+
+# Visualization
+matplotlib
+seaborn
+
+# Model Explanation
+shap
+umap-learn
+
+# Utilities
+kagglehub
+joblib
+tabulate
+
+# Optional but recommended versions
+pandas>=1.0.0
+numpy>=1.19.0
+scikit-learn>=0.24.0
+xgboost>=1.4.0
+catboost>=0.24
+torch>=1.8.0
+transformers>=4.5.0
+nltk>=3.6.0
+matplotlib>=3.3.0
+seaborn>=0.11.0
+shap>=0.39.0
+umap-learn>=0.5.0

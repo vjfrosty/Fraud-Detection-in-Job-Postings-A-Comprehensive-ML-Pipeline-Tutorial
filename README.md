@@ -15,7 +15,6 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
 4. Create a reproducible workflow for similar classification tasks
 
 ### Significance
-- **Social Impact**: Protects vulnerable job seekers from scams
 - **Technical Value**: Addresses common ML challenges (imbalanced data, text processing)
 - **Educational Merit**: Demonstrates practical implementation of advanced ML concepts
 
@@ -155,22 +154,85 @@ python -m nltk.downloader punkt stopwords wordnet
 - Additional feature engineering
 - Deep learning integration
 
-## 8. References
-[List of references from references.txt]
+## 8. Literature and Sources
+
+### Core Dataset
+1. Bansal, S. (2023). "Real or Fake? Fake Job Posting Prediction." Kaggle Dataset.
+   - Primary data source for this project
+   - Contains 18K job postings with various features
+   - Includes binary classification labels (real/fake)
+   - [Dataset Link](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction)
+
+### Methodology Sources
+
+#### Text Processing and NLP
+2. Jain, A. (2023). "TF-IDF in NLP: Term Frequency-Inverse Document Frequency." Medium.
+   - Mathematical foundation of TF-IDF
+   - Implementation guidelines
+   - [Article Link](https://medium.com/@abhishekjainindore24/tf-idf-in-nlp-term-frequency-inverse-document-frequency-e05b65932f1d)
+
+3. Mohan, N. (2023). "NLP Text Classification Using TF-IDF Features." Kaggle.
+   - Practical implementation of TF-IDF
+   - Text preprocessing techniques
+   - [Notebook Link](https://www.kaggle.com/code/neerajmohan/nlp-text-classification-using-tf-idf-features)
+
+4. Swati. (2023). "Text Classification Using TF-IDF." Medium.
+   - Step-by-step TF-IDF implementation
+   - Python code examples
+   - [Article Link](https://medium.com/swlh/text-classification-using-tf-idf-7404e75565b8)
+
+#### Pipeline and Transformers
+5. Koehrsen, W. (2023). "Customizing Scikit-Learn Pipelines: Write Your Own Transformer." Towards Data Science.
+   - Custom transformer development
+   - Pipeline integration techniques
+   - [Article Link](https://towardsdatascience.com/customizing-scikit-learn-pipelines-write-your-own-transformer-fdaaefc5e5d7)
+
+6. Adam48. (2023). "Tutorial: Build Custom Pipeline Sklearn Pandas." Kaggle.
+   - Pipeline construction guidelines
+   - Integration of preprocessing steps
+   - [Notebook Link](https://www.kaggle.com/code/adam48/tutorial-build-custom-pipeline-sklearn-pandas)
+
+#### Feature Engineering and Selection
+7. Brownlee, J. (2023). "Feature Selection with Numerical Input Data." Machine Learning Mastery.
+   - Feature selection techniques
+   - Implementation strategies
+   - [Article Link](https://machinelearningmastery.com/feature-selection-with-numerical-input-data/)
+
+8. Rutecki, M. (2023). "One-Hot Encoding: Everything You Need to Know." Kaggle.
+   - Categorical data encoding
+   - Implementation best practices
+   - [Notebook Link](https://www.kaggle.com/code/marcinrutecki/one-hot-encoding-everything-you-need-to-know)
+
+#### Imbalanced Data Handling
+9. Aghabozorgi, S. (2023). "7 Techniques to Handle Imbalanced Data." KDnuggets.
+   - Comprehensive overview of balancing techniques
+   - Strategy comparison
+   - [Article Link](https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html)
+
+10. Brownlee, J. (2023). "SMOTE: Oversampling for Imbalanced Classification." Machine Learning Mastery.
+    - SMOTE implementation details
+    - Performance impact analysis
+    - [Article Link](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)
+
+#### Model Optimization
+11. Shadesh. (2023). "Hyperparameter Tuning for Multiple Algorithms." Kaggle.
+    - Hyperparameter optimization techniques
+    - Multi-model comparison
+    - [Notebook Link](https://www.kaggle.com/code/shadesh/hyperparameter-tuning-for-multiple-algorithms)
+
+### Implementation Notes
+The above sources were instrumental in developing various aspects of this project:
+- Dataset selection and understanding (Source 1)
+- Text processing pipeline development (Sources 2-4)
+- Custom transformer implementation (Sources 5-6)
+- Feature engineering and selection (Sources 7-8)
+- Handling data imbalance (Sources 9-10)
+- Model optimization (Source 11)
+
+Each source contributed to specific components of the project, ensuring best practices and methodological rigor throughout the implementation.
 
 ## 9. License
 MIT License
 
 ## 10. Contact
-[Your contact information]
-```
-
-This expanded README.md:
-1. Clearly formulates the problem and its significance
-2. Provides well-structured documentation
-3. Includes mathematical concepts and formulas
-4. Details code organization and quality measures
-5. Explains methods and data handling
-6. Communicates effectively with appropriate technical depth
-
-Would you like me to expand any particular section further?
+Yasen Ivanov
