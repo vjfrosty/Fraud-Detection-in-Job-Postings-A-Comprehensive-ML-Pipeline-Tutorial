@@ -1,0 +1,55 @@
+1. **Real or Fake? Fake Job Posting Prediction**  
+   *Kaggle Dataset by Shivam Bansal*  
+   This dataset contains a collection of job postings labeled as real or fake. It includes various features such as job title, location, department, salary range, company profile, and more. The dataset is designed to help build models that can detect fraudulent job postings, which is crucial for protecting job seekers from scams.  
+   Link: https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction
+
+2. **Customizing Scikit-Learn Pipelines: Write Your Own Transformer**  
+   *Towards Data Science by Will Koehrsen*  
+   This article provides a detailed guide on how to create custom transformers in Scikit-Learn. It explains the importance of transformers in preprocessing data and how they can be integrated into a pipeline. The article includes code examples and practical tips for writing and using custom transformers to handle specific data preprocessing tasks.  
+   Link: https://towardsdatascience.com/customizing-scikit-learn-pipelines-write-your-own-transformer-fdaaefc5e5d7
+
+3. **TF-IDF in NLP: Term Frequency-Inverse Document Frequency**  
+   *Medium by Abhishek Jain*  
+   This article introduces the TF-IDF (Term Frequency-Inverse Document Frequency) technique, which is widely used in natural language processing to evaluate the importance of a word in a document relative to a collection of documents. The article explains the mathematical foundation of TF-IDF, its implementation, and its applications in text analysis and information retrieval.  
+   Link: https://medium.com/@abhishekjainindore24/tf-idf-in-nlp-term-frequency-inverse-document-frequency-e05b65932f1d
+
+4. **NLP Text Classification Using TF-IDF Features**  
+   *Kaggle Notebook by Neeraj Mohan*  
+   This notebook provides a practical guide on using TF-IDF features for text classification tasks in natural language processing. It covers the steps involved in preprocessing text data, extracting TF-IDF features, and building machine learning models to classify text. The notebook includes code examples and explanations to help users understand and implement the techniques.  
+   Link: https://www.kaggle.com/code/neerajmohan/nlp-text-classification-using-tf-idf-features
+
+5. **Text Classification Using TF-IDF**  
+   *Medium by Swati*  
+   This article covers the basics of text classification using the TF-IDF technique. It explains how TF-IDF works, its advantages, and how it can be used to convert text data into numerical features for machine learning models. The article includes a step-by-step implementation in Python, making it accessible for beginners in natural language processing.  
+   Link: https://medium.com/swlh/text-classification-using-tf-idf-7404e75565b8
+
+6. **Feature Selection with Numerical Input Data**  
+   *Machine Learning Mastery by Jason Brownlee*  
+   This article discusses various techniques for feature selection when dealing with numerical data in machine learning. It explains the importance of feature selection in improving model performance and reducing overfitting. The article covers methods such as correlation analysis, univariate selection, recursive feature elimination, and more, with practical examples and code snippets.  
+   Link: https://machinelearningmastery.com/feature-selection-with-numerical-input-data/
+
+7. **7 Techniques to Handle Imbalanced Data**  
+   *KDnuggets by Saeed Aghabozorgi*  
+   This article provides strategies to address the challenges of imbalanced datasets in machine learning. It discusses techniques such as resampling (oversampling and undersampling), using different performance metrics, generating synthetic samples, and ensemble methods. The article aims to help practitioners build more robust models when dealing with imbalanced data.  
+   Link: https://www.kdnuggets.com/2017/06/7-techniques-handle-imbalanced-data.html
+
+8. **One-Hot Encoding: Everything You Need to Know**  
+   *Kaggle Notebook by Marcin Rutecki*  
+   This comprehensive guide covers one-hot encoding, a technique used to convert categorical data into numerical format. The notebook explains the concept of one-hot encoding, its advantages and disadvantages, and how to implement it in Python using libraries like Pandas and Scikit-Learn. It includes practical examples to illustrate the process.  
+   Link: https://www.kaggle.com/code/marcinrutecki/one-hot-encoding-everything-you-need-to-know
+
+9. **SMOTE: Oversampling for Imbalanced Classification**  
+   *Machine Learning Mastery by Jason Brownlee*  
+   This article explains the SMOTE (Synthetic Minority Over-sampling Technique) method for oversampling minority classes in imbalanced datasets. It describes how SMOTE works, its benefits, and how to implement it using Python. The article includes code examples and discusses the impact of SMOTE on model performance.  
+   Link: https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/
+
+10. **Hyperparameter Tuning for Multiple Algorithms**  
+    *Kaggle Notebook by Shadesh*  
+    This notebook demonstrates how to perform hyperparameter tuning for various machine learning algorithms. It covers techniques such as grid search and random search, and shows how to use them to optimize model performance. The notebook includes practical examples and code snippets to help users understand and apply hyperparameter tuning in their projects.  
+    Link: https://www.kaggle.com/code/shadesh/hyperparameter-tuning-for-multiple-algorithms
+
+11. **Tutorial: Build Custom Pipeline Sklearn Pandas**  
+    *Kaggle Notebook by Adam48*  
+    This tutorial provides a step-by-step guide on building custom pipelines using Scikit-Learn and Pandas for data preprocessing and modeling. It explains the benefits of using pipelines, how to create and customize them, and how to integrate different preprocessing steps and models into a single workflow. The notebook includes detailed code examples and explanations.  
+    Link: https://www.kaggle.com/code/adam48/tutorial-build-custom-pipeline-sklearn-pandas
+
