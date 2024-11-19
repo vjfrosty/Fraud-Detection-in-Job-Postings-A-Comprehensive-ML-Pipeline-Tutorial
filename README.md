@@ -1,6 +1,3 @@
-I'll help you expand the README.md to create a comprehensive tutorial that meets the grading criteria. Here's an enhanced version:
-
-```markdown:README.md
 # Fraud Detection in Job Postings: A Comprehensive ML Pipeline Tutorial
 
 ## 1. Problem Understanding and Significance
