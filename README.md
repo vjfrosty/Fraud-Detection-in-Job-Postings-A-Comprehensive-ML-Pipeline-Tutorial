@@ -38,7 +38,7 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
 ![Missing Values by Target Status](media/notebook1/missing_by_class.png)
 
 ### Feature Correlations
-![Correlation Matrix](Correlation_matix.png)
+![Correlation Matrix](media/notebook1/Correlation_matix.png)
 
 **Binary Feature Correlations with Fraud**:
 1. **Company Logo (-0.26)**:
