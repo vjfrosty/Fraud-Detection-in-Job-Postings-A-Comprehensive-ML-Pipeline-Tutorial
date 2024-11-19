@@ -17,7 +17,7 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
 
 ## 2. Methodology and Implementation
 
-### Data Analysis ([01.DataLoading_and_EDA](notebooks/01.DataLoading_and_EDA.ipynb))
+### Data Analysis ([01.DataLoading_and_EDA](notebooks/01.DataLoading and EDA.ipynb))
 - Data loading and initial inspection (cells 1-2)
 - Exploratory analysis using `DataAnalyzer` transformer (cells 3-4)
 - Target variable analysis using `TargetAnalyzer` (cells 5-6)
@@ -35,7 +35,7 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
   - Percentage Missing: 21.78%
 
 
-![Missing Values by Target Status](missing_by_class.png)
+![Missing Values by Target Status](media/notebook1/missing_by_class.png)
 
 ### Feature Correlations
 ![Correlation Matrix](Correlation_matix.png)
