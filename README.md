@@ -17,27 +17,85 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
 
 ## 2. Methodology and Implementation
 
-### Data Analysis (Notebook 01)
-#### Purpose
-- Understand data structure and quality
-- Identify patterns and relationships
-- Guide feature engineering decisions
+### Data Analysis ([01.DataLoading_and_EDA](notebooks/01.DataLoading_and_EDA.ipynb))
+- Data loading and initial inspection (cells 1-2)
+- Exploratory analysis using `DataAnalyzer` transformer (cells 3-4)
+- Target variable analysis using `TargetAnalyzer` (cells 5-6)
+- Text and categorical feature analysis (cells 7-8)
 
-#### Key Components
-1. **Data Loading and Initial Inspection**
-   - Dataset overview
-   - Missing value analysis
-   - Data type verification
 
-2. **Exploratory Data Analysis**
-   - Distribution analysis
-   - Correlation studies
-   - Target variable examination
+- **Target Distribution**:
+  - Legitimate Jobs (0): 17,014 (95.16%)
+  - Fraudulent Jobs (1): 866 (4.84%)
+  - Highly imbalanced classification problem
+#### Dataset Statistics
+- **Missing Value Analysis**:
+  - Total Cells: 321,840
+  - Total Missing: 70,103
+  - Percentage Missing: 21.78%
 
-3. **Data Quality Assessment**
-   - Missing value patterns
-   - Outlier detection
-   - Data consistency checks
+
+![Missing Values by Target Status](missing_by_class.png)
+
+### Feature Correlations
+![Correlation Matrix](Correlation_matix.png)
+
+**Binary Feature Correlations with Fraud**:
+1. **Company Logo (-0.26)**:
+   - Strongest correlation with fraud status
+   - Negative correlation indicates legitimate posts more likely to have logos
+   - Important potential feature for fraud detection
+
+2. **Screening Questions (-0.092)**:
+   - Weak negative correlation with fraud
+   - Legitimate posts slightly more likely to include screening questions
+   - Moderate correlation (0.23) with company logo presence
+
+3. **Telecommuting (0.035)**:
+   - Very weak positive correlation with fraud
+   - Not likely to be a strong predictor in isolation
+   - Shows minimal correlation with other features
+
+4. **Job ID (0.08)**:
+   - Negligible correlation with fraud status
+   - Random identifier confirmed by weak correlations
+   - Should be excluded from modeling features
+
+**Correlation Matrix Insights**:
+- Most correlations are weak (|r| < 0.3)
+- No significant multicollinearity among binary features
+- Company logo presence emerges as the strongest fraud indicator
+- Feature independence suggests potential value in combining multiple weak signals
+
+
+- **Missing Values by Feature and Fraud Status**:
+  | Feature | Non-Fraudulent | Fraudulent |
+  |---------|----------------|------------|
+  | salary_range | 84.45% | 74.25% |
+  | department | 64.75% | 61.32% |
+  | company_profile | 15.99% | 67.78% |
+  | required_education | 44.99% | 52.08% |
+  | benefits | 40.24% | 42.03% |
+  | required_experience | 38.88% | 50.23% |
+  | function | 35.96% | 38.91% |
+  | industry | 27.20% | 31.74% |
+  | employment_type | 18.88% | 27.83% |
+  | requirements | 14.93% | 17.78% |
+  | location | 1.02% | 2.19% |
+
+  **Key Observations**:
+  - Company profile shows significant disparity: 67.78% missing in fraudulent vs 15.99% in legitimate posts
+  - Salary information is frequently missing in both classes (>74%)
+  - Core job details (title, description) are rarely missing
+  - Higher missing rates in fraudulent posts across most features
+
+
+#### Key Findings
+- High-quality features identified for fraud detection
+- Systematic handling of missing values
+- Automated pipeline for reproducible analysis
+- Clear separation of feature types for modeling
+
 
 ### Feature Engineering (Notebook 02)
 #### Text Processing
