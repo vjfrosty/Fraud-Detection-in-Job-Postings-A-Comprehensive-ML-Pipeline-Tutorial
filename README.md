@@ -17,7 +17,7 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
 
 ## 2. Methodology and Implementation
 
-### Data Analysis [01.DataLoading_and_EDA](notebooks/01.DataLoading and EDA.ipynb)
+### Data Analysis ([01.DataLoading_and_EDA](notebooks/01.DataLoading%20and%20EDA.ipynb))
 - Data loading and initial inspection (cells 1-2)
 - Exploratory analysis using `DataAnalyzer` transformer (cells 3-4)
 - Target variable analysis using `TargetAnalyzer` (cells 5-6)
