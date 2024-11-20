@@ -1,42 +1,28 @@
-# Data manipulation and analysis
-pandas
-numpy
+# Core Data Science & Machine Learning
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+scipy==1.11.1
 
-# Machine Learning
-scikit-learn
-xgboost
-catboost
-imblearn
-optuna
-
-# Deep Learning and NLP
-torch
-transformers
-nltk
+# Machine Learning Frameworks
+xgboost==1.7.6
+catboost==1.2
+imbalanced-learn==0.11.0
 
 # Visualization
-matplotlib
-seaborn
+matplotlib==3.7.1
+seaborn==0.12.2
 
-# Model Explanation
-shap
-umap-learn
+# Model Explainability
+shap==0.42.0
+
+# NLP & Text Processing
+nltk==3.8.1
 
 # Utilities
-kagglehub
-joblib
-tabulate
+joblib==1.3.1
+kagglehub==0.1.5
+tabulate==0.9.0
 
-# Optional but recommended versions
-pandas>=1.0.0
-numpy>=1.19.0
-scikit-learn>=0.24.0
-xgboost>=1.4.0
-catboost>=0.24
-torch>=1.8.0
-transformers>=4.5.0
-nltk>=3.6.0
-matplotlib>=3.3.0
-seaborn>=0.11.0
-shap>=0.39.0
-umap-learn>=0.5.0
+# Optional Dependencies
+optuna==3.2.0       # Hyperparameter optimization

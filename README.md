@@ -97,60 +97,133 @@ Fraudulent job postings pose a significant threat to job seekers, potentially le
 - Clear separation of feature types for modeling
 
 
-### Feature Engineering (Notebook 02)
-#### Text Processing
-1. **NLTK Implementation**
-   ```python
-   from nltk.tokenize import word_tokenize
-   from nltk.corpus import stopwords
-   from nltk.stem import WordNetLemmatizer
-   ```
-   - Tokenization
+### Feature Engineering ([02.FE_Transformers](notebooks/02.FE_Transformers.ipynb))
+
+#### Overview
+Implements  feature engineering pipeline using custom transformers and NLTK for text processing. Focuses on automated feature type detection and processing.
+
+#### Key Components
+
+1. **Feature Type Detection**
+   - Automatic categorization of features into:
+     - Text features (vectorize): 9 features including title, description, requirements
+     - Boolean features (binary): 3 features including telecommuting, has_company_logo
+     - Categorical features (onehot): 3 features including employment_type, required_experience
+     - Numeric features: 4 features including text length metrics
+
+2. **Text Processing Pipeline**
+
+   - Tokenization and lemmatization
    - Stop word removal
-   - Lemmatization
+   - TF-IDF vectorization 
 
-2. **Custom Transformers**
-   - Text feature processor
-   - Categorical encoder
-   - Feature selector
+3. **Feature Processing Pipeline**
+   ```python
+   pipeline = Pipeline([
+       ('feature_processor', processor),
+       ('feature_scaler', scaler),
+       ('correlation_reducer', correlation_reducer),
+       ('feature_selector', selector)
+   ])
+   ```
+   - Custom transformers for each feature type
+   - Robust scaling for numeric features
+   - Correlation reduction 
+   - Feature selection 
 
-3. **Feature Selection Methods**
-   - Statistical tests
-   - Correlation analysis
-   - Domain knowledge application
 
-### Model Development (Notebook 03)
+
+### Model Development ([03-01.Training_and_Evaluation](notebooks/03-1.Training and Evaluation_grid.ipynb))
+
+#### Overview
+Implements model training, optimization, and evaluation pipeline using multiple machine learning algorithms and ensemble techniques, with grid search optimization focused on precision metrics.
+
 #### Pipeline Components
+
 1. **Data Preparation**
-   - Train-test splitting
-   - SMOTE for imbalanced data
-   - Feature scaling
+   - Train-test split (75/25) with stratification
+   - SMOTE oversampling with 6.0 ratio
+   - Balanced training set for improved minority class detection
 
 2. **Model Selection**
-   - Random Forest
-   - XGBoost
-   - CatBoost
-   - Stacking Ensemble
+   - Base Models:
+     - XGBoost (optimized for precision)
+     - Neural Network (MLP)
+   - Ensemble:
+     - Stacking Classifier with Logistic Regression meta-learner
+     - Combines predictions from all base models
 
 3. **Optimization Techniques**
-   - Hyperparameter tuning
-   - Cross-validation
-   - Performance metrics selection
+   - Halving Grid Search CV for efficient parameter tuning
+   - Cross-validation with stratification (k=2)
+   - Model-specific parameter grids
+   - Optimization goal: precision metrics
 
-## 3. Mathematical Concepts
+4. **Evaluation Methods**
+   - Classification metrics (Precision, Recall, F1)
+   - ROC and PR curves
+   - Confusion matrices
+   - Imbalanced learning metrics
+   - Comprehensive overfitting analysis
 
-### Text Processing
-- **TF-IDF**: Term Frequency-Inverse Document Frequency
-  ```
-  TF(t,d) = (Number of times term t appears in document d) / (Total number of terms in d)
-  IDF(t) = log(Total number of documents / Number of documents containing term t)
-  ```
+#### Performance Results
 
-### Model Evaluation
-- **Precision**: TP / (TP + FP)
-- **Recall**: TP / (TP + FN)
-- **F1 Score**: 2 * (Precision * Recall) / (Precision + Recall)
+1. **Model Metrics**
+   - XGBoost:
+     - Precision: 0.92
+     - Recall: 0.89
+     - F1-Score: 0.90
+   - Stacking Classifier:
+     - Precision: 0.94
+     - Recall: 0.91
+     - F1-Score: 0.92
 
+2. **Overfitting Analysis**
+   - Training vs Test Performance Gap:
+     - XGBoost: ~5% difference
+     - Neural Network: ~8% difference
+     - Stacking Model: ~4% difference
+   - Mitigation Strategies:
+     - Early stopping in tree-based models
+     - Dropout in Neural Network
+     - Cross-validation validation
+
+#### Key Features
+- Automated model optimization with HalvingGridSearchCV
+- Comprehensive evaluation metrics
+- Robust imbalanced data handling
+- Model persistence (.joblib format)
+
+#### Output
+- Optimized models saved to 'models/' directory
+- Performance visualizations for each model
+- Detailed evaluation reports
+- Cross-validation and overfitting analysis results
+
+### Model Explainability ([04.Explainability_and_Insights](notebooks/04.Explainability_and_Insights.ipynb))
+
+#### Overview
+Implements SHAP (SHapley Additive exPlanations) analysis to interpret the XGBoost model's decision-making process and feature importance in fraud detection.
+
+#### Components
+
+1. **SHAP Analysis**
+   - Global feature importance visualization
+   - Individual feature impact assessment 
+   - Feature interaction analysis
+   - Impact distribution calculations
+
+2. **Key Insights**
+   - Top influential features ranked by importance
+   - Positive vs negative feature impacts
+   - Feature interaction patterns
+   - Statistical significance measures
+
+3. **Outputs**
+   - Feature importance rankings and percentages
+   - Impact analysis reports
+   - Interaction visualizations
+   - Statistical summaries
 ## 4. Implementation Details
 
 ### Code Structure
@@ -159,11 +232,18 @@ project/
 ├── notebooks/
 │   ├── 01.DataLoading_and_EDA.ipynb
 │   ├── 02.FE_Transformers.ipynb
-│   └── 03.Training_and_Evaluation.ipynb
+│   └── 03.Training and Evaluation_grid.ipynb
+│   └── 04.Explainability and Insights.ipynb
 ├── data/
 │   ├── processed_data.pkl
 │   ├── feature_lists.pkl
 │   └── engineered_features.pkl
+│   ├── X_train_balanced.pkl
+│   ├── X_train.pkl
+│   ├── X_test.pkl
+│   ├── y_train_balanced.pkl
+│   ├── y_train.pkl
+│   └── y_test.pkl
 └── models/
     ├── random_forest_model.joblib
     ├── xgboost_model.joblib
@@ -175,21 +255,19 @@ project/
 - scikit-learn
 - NLTK
 - XGBoost
-- CatBoost
 - pandas
 - numpy
 
 ## 5. Results and Analysis
 
 ### Model Performance
-- Precision: 0.92
-- Recall: 0.85
-- F1 Score: 0.88
+
+
 
 ### Key Findings
 1. Text features provide strongest signals
 2. SMOTE improves minority class detection
-3. Ensemble methods outperform individual models
+
 
 ## 6. Usage Instructions
 
@@ -198,7 +276,6 @@ project/
 pip install -r requirements.txt
 python -m nltk.downloader punkt stopwords wordnet
 ```
-
 ### Execution
 1. Run notebooks in sequence
 2. Follow in-notebook documentation
@@ -209,7 +286,7 @@ python -m nltk.downloader punkt stopwords wordnet
 - Additional feature engineering
 - Deep learning integration
 
-## 8. Literature and Sources
+## 8. Data 
 
 ### Core Dataset
 1. Bansal, S. (2023). "Real or Fake? Fake Job Posting Prediction." Kaggle Dataset.
@@ -287,7 +364,7 @@ The above sources were instrumental in developing various aspects of this projec
 Each source contributed to specific components of the project, ensuring best practices and methodological rigor throughout the implementation.
 
 ## 9. License
-MIT License
+
 
 ## 10. Contact
 Yasen Ivanov
