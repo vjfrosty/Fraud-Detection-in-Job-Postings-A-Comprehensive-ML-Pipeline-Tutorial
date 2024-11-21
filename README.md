@@ -1,5 +1,5 @@
 # Fraud Detection in Job Postings: A Comprehensive ML Pipeline Tutorial
-
+https://github.com/vjfrosty/Fraud-Detection-in-Job-Postings-A-Comprehensive-ML-Pipeline-Tutorial
 ## 1. Problem Understanding and Significance
 
 ### Problem Statement
