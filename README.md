@@ -1,6 +1,6 @@
 
 # Fraud Detection in Job Postings: A Comprehensive ML Pipeline Tutorial
-# ![AI Course Banner](https://softuni.bg/content/images/header/white-horizontal-logo-university.svg) Artificial Intelligence modul 
+
 ### Machine Learning course - Personal Exam Projects by Yasen Ivanov
 
 ### Obtained certificate:
@@ -370,7 +370,7 @@ The above sources were instrumental in developing various aspects of this projec
 Each source contributed to specific components of the project, ensuring best practices and methodological rigor throughout the implementation.
 
 ## 9. License
-
+MIT
 
 ## 10. Contact
-Yasen Ivanov
+iasen.ivanov@gmail.com
