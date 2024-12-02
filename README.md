@@ -1,11 +1,6 @@
 
 # Fraud Detection in Job Postings: A Comprehensive ML Pipeline Tutorial
 
-### Machine Learning course - Personal Exam Projects by Yasen Ivanov
-
-### Obtained certificate:
-<img src="https://github.com/vjfrosty/Softuni-Artificial-Intelligence-projects/blob/main/01_Math-Concepts-for-Developers/Math%20Concepts%20for%20Developers%20-%20March%202024%20-%20Certificate.jpeg" alt="Certificate" width="400">
-
 ## 1. Problem Understanding and Significance
 
 ### Problem Statement
@@ -374,3 +369,9 @@ MIT
 
 ## 10. Contact
 iasen.ivanov@gmail.com
+
+### Machine Learning course - Personal Exam Projects by Yasen Ivanov
+
+### Obtained certificate:
+<img src="https://github.com/vjfrosty/Softuni-Artificial-Intelligence-projects/blob/main/01_Math-Concepts-for-Developers/Math%20Concepts%20for%20Developers%20-%20March%202024%20-%20Certificate.jpeg" alt="Certificate" width="400">
+
